@@ -31,7 +31,7 @@ select * from animals where neutered
 
 -- Find all animals not named Gabumon.
 
-select * from where name != 'Gabumon'
+select * from where animals name != 'Gabumon'
 
 
 -- Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg)
