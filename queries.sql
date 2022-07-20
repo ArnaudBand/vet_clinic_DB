@@ -38,4 +38,30 @@ select * from where animals name != 'Gabumon'
 
 select * from animals where weight_kg between 10.4 and 17.3;
 
+                    -- Day 2
+                    --  --  --
+
+update animals set species = 'unspecified';
+update animals set species = 'digimon' where name like '%mom';
+update animals set species = 'pokemon' where species is null;
+delete from animals;
+delete from animals where date_of_birth > date '2022-01-01';
+update animals set weight_kg = weight_kg * -1;
+update animals set weight_kg = weight_kg * -1 where weight_kg < 0;
+
+
+-- How many animals are there?
+select count(*) from animals;
+-- How many animals have never tried to escape?
+select count(*) from animals where escape_attempts = 0;
+-- What is the average weight of animals?
+select avg(weight_kg) from animals;
+-- Who escapes the most, neutered or not neutered animals?
+select neutered, max(escape_attempts)from animals by group by neutered;
+-- What is the minimum and maximum weight of each type of animal?
+select species, max(weight_kg), min(weight_kg) from animals group by species;
+-- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+select species, avg(escape_attempts) from animals where date_of_birth between '1990-01-01'and '2000-01-01' group by species;
+
+
 
