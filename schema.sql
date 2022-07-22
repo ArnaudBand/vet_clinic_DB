@@ -27,4 +27,28 @@ ALTER TABLE animals ADD CONSTRAINT id_species FOREIGN KEY (species_id) REFERENCE
 alter table animals add column owner_id int;
 ALTER TABLE animals ADD CONSTRAINT id_owners FOREIGN KEY (owner_id) REFERENCES owners (id);
 
+                    -- Day 4 --
+            ---------------------------
+
+create table vets (
+    id int generated always as identity primary key,
+    name varchar(50),
+    age int,
+    date_of_graduation date
+)
+
+create table specializations (
+    vet_id int,
+    specie_id int,
+    constraint fk_vets foreign key (vet_id) references vets(id),
+    constraint fk_speies foreign key (specie_id) references species(id)
+)
+
+create table visits (
+  vet_id int,
+  animal_id int,
+  date_of_visit date,
+  constraint fk_vets foreign key (vet_id) references vets(id),
+  constraint fk_animals foreign key (animal_id) references animals(id)
+);
 
