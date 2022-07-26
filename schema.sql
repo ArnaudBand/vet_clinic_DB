@@ -52,3 +52,8 @@ create table visits (
   constraint fk_animals foreign key (animal_id) references animals(id)
 );
 
+                        --- WEEK 2 DAY 1----
+                        --------------------
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
