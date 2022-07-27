@@ -52,3 +52,16 @@ create table visits (
   constraint fk_animals foreign key (animal_id) references animals(id)
 );
 
+                        --- WEEK 2 DAY 1----
+                        --------------------
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+explain analyze select COUNT(*) from visits where animal_id = 4;
+explain analyze select * from visits where vet_id = 2;
+explain analyze select * from owners where email = 'owner_18327@mail.com';
+
+create index visits_animal_id on visits(animal_id);
+create index visits_vet_id on visits(vet_id);
+create index owners_email_index on owners(email);
