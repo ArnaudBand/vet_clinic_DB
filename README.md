@@ -21,6 +21,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@twitterhandle](https://twitter.com/@ba104781)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ArnaudBandonkeye/)
 
+👤 **Emmanuel Orji-Ihuoma**
+
+- GitHub: [@emmiiorji](https://github.com/emmiiorji)
+- Twitter: [@emmiiorji](https://twitter.com/emmiiorji)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/orji-emmanuel)
 
 ## 🤝 Contributing
 
